@@ -178,4 +178,4 @@ If you need/want the special settings or want to make some changes to standard n
 
 - [x] **Done!** **&** **ENJOY!** :wink:
 
-![Results in picture](blob/main/locales_2023-12-24_09%3A38%3A16_0002.jpeg)
+![Results in picture](locales_2023-12-24_09:38:16_0002.jpeg)
