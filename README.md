@@ -178,4 +178,4 @@ If you need/want the special settings or want to make some changes to standard n
 
 - [x] **Done!** **&** **ENJOY!** :wink:
 
-![Results in picture](https://github.com/Advantaged/Locales_ISO-8601/blob/main/locales_2023-12-24_09%3A38%3A16_0002.jpeg)
+![](https://github.com/Advantaged/Locales_ISO-8601/blob/main/locales_2023-12-24_09%3A38%3A16_0002.jpeg)
