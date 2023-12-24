@@ -177,3 +177,5 @@ Assure first all prerequisite (§ 2 and § 3) are satisfied.
 If you need/want the special settings or want to make some changes to standard new create locales, please use/reuse **§ 4** and **§ 5** for this scope.
 
 - [x] **Done!** **&** **ENJOY!** :wink:
+
+![Results in picture](blob/main/locales_2023-12-24_09%3A38%3A16_0002.jpeg)
