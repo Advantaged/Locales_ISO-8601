@@ -132,7 +132,7 @@ LC_COLLATE=
 
 ```
 
-* 4.1.4. Following Line, with my changes, let show the time in 24 hours & the date in `ISO-8601` = `Y/m/d` = e.g. `2023/12/25`, if you wish ISO-8601 like this: 'Y-m-d' use 'en_SE.UTF-8'= `2023-12-25`
+* 4.1.4. Following Line, with my changes, let show the time in 24 hours & the date in `ISO-8601` = `Y/m/d` use `en_ZA.UTF-8` = `2023/12/25`, ISO-8601 = `Y-m-d` use `en_SE.UTF-8` or `ken_CM.UTF-8` = `2023-12-25`.
 
 ```
 LC_TIME=
