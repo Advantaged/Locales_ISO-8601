@@ -8,7 +8,7 @@
 ## General Information
 * I installed my Arch-Linux with the support of `Calamares` and...
 * Choose "English" as Language and "Germany" as country.
-* In case you have installed your Arch-Linux the normal way and or want a complete new Locale-Set --> use first the instruction from **§ 7** on.
+* In case you have installed your Arch-Linux the normal way and or want a complete new Locale-Set --> use first the instruction from **§ 8** on.
 
 Credential:
 [Arch-Linux Locale-Wiki](https://wiki.archlinux.org/title/locale) -- [Arch-Linux Locale-Man-Page](https://man.archlinux.org/man/locale.7)
@@ -70,7 +70,8 @@ All listed files below allow every user of the machine to get homogeneous locale
 **Note:** `/etc/skel/.config/locale.conf` is for all user you create new.
 
 ### 4. My locales:
-* command is `locale` , the output hereafter
+* **Note:** My system was installed through a (Calamares) GUI, i choose english as language & Germany as country 🟰 i changed only the `LC_TIME=en_SE.UTF-8` as in '$ 6.' shown.
+* The command is `locale` , the output hereafter...:
 
 ```
 locale: Cannot set LC_ALL to default locale: No such file or directory
