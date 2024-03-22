@@ -14,7 +14,7 @@ Credential:
 [Arch-Linux Locale-Wiki](https://wiki.archlinux.org/title/locale) -- [Arch-Linux Locale-Man-Page](https://man.archlinux.org/man/locale.7)
 
 ## Scope of work
-Make **ISO-8601** available to every user on the machine in a very simple way.
+Make **ISO-8601** available to every user & data-base on the machine or server in a very simple way.
 
 ### 1. Read/Set the actual default Locales
 
@@ -31,7 +31,7 @@ $ source /etc/profile.d/locale.sh
 **Note:** XDG-Utils must be installed. Not yet existing file must be created e.g. `/etc/skel/.config/locale.conf`
 
 ### 2. Prerequisite
-Check, let the system check if following prerequisite are installed and in case install them.
+Check, let the system check if following prerequisite are installed and in case install them, is you made a proper installation you don't nrrd those again, but in case...
 
 ```
 pacman -S --needed --noconfirm archlinux-xdg-menu haskell-xdg-basedir \
@@ -69,25 +69,25 @@ All listed files below allow every user of the machine to get homogeneous locale
 
 **Note:** `/etc/skel/.config/locale.conf` is for all user you create new.
 
-### 4. Content of edited files:
+### 4. My locales:
+* command is `locale` , the output hereafter
 
 ```
+locale: Cannot set LC_ALL to default locale: No such file or directory
 LANG=en_US.UTF-8
-LANGUAGE=en_US:en_GB:de:es:fr:ia:it:jp:pt:ru:zh
-LC_ADDRESS=de_DE.UTF-8
-LC_COLLATE=C
-LC_CTYPE=en_US.UTF-8
-LC_IDENTIFICATION=en_US.UTF-8
-LC_MEASUREMENT=de_DE.UTF-8
-LC_MESSAGES=en_US.UTF-8
-LC_MONETARY=de_DE.UTF-8
-LC_NAME=de_DE.UTF-8
+LC_CTYPE="en_US.UTF-8"
 LC_NUMERIC=de_DE.UTF-8
+LC_TIME=en_SE.UTF-8
+LC_COLLATE="en_US.UTF-8"
+LC_MONETARY=de_DE.UTF-8
+LC_MESSAGES="en_US.UTF-8"
 LC_PAPER=de_DE.UTF-8
+LC_NAME=de_DE.UTF-8
+LC_ADDRESS=de_DE.UTF-8
 LC_TELEPHONE=de_DE.UTF-8
-LC_TIME=en_ZA.UTF-8
+LC_MEASUREMENT=de_DE.UTF-8
+LC_IDENTIFICATION=de_DE.UTF-8
 LC_ALL=
-
 ```
 
 #### 4.1. Explanation
@@ -125,14 +125,14 @@ LC_TELEPHONE=
 
 ```
 
-* 4.1.3. Following Line is recommended to be set to **C** = professional collating.
+* 4.1.3. Following Line is recommended to be set to **C** = professional collating, normally don't need specialsettings.
 
 ```
 LC_COLLATE=
 
 ```
 
-* 4.1.4. Following Line, with my changes, let show the time in 24 hours & the date in `ISO-8601` = `Y/m/d` use `en_ZA.UTF-8` = `2023/12/25`, ISO-8601 = `Y-m-d` use `en_SE.UTF-8` or `ken_CM.UTF-8` = `2023-12-25`.
+* 4.1.4. Following Line, with my changes, let show the time in 24 hours & the date in `ISO-8601` = `Y/m/d` , use `en_ZA.UTF-8` for displaying date with 'slash' 🟰 use `en_SE.UTF-8` or `ken_CM.UTF-8` for displaying date with 'dash' `2023/12/25`.
 
 ```
 LC_TIME=
@@ -157,22 +157,33 @@ $ source /etc/profile.d/locale.sh
 
 At this point, you are done and can restart the machine to see the final results.
 
-### 6. Read Locale & more
+#### 6. Set locale on the fly or change only few locales 
+
+* like [here from Raynman](https://bbs.archlinux.org/viewtopic.php?id=284333) explained
+
+```
+localectl set-locale LC_TIME=en_SE.UTF-8
+
+localectl set-locale LANGUAGE=en_US 
+
+```
+
+### 7. Read Locale & more
 
 * Actual running locales: `locale`
 * All actual adjustments of your desktop `printenv`
 
-### 7. Set completely new Locales
+### 8. Set completely new Locales
 
 Assure first all prerequisite (§ 2 and § 3) are satisfied.
 
-* 7.1. Read all present installed Locales you can choose `locale -a` or...
-* 7.2. Edit `/etc/locale.gen` as 'ROOT' e.g. `sudo nano /etc/locale.gen` to see and/or enable other Locales.
-* 7.3. To disable a Locale-Set set/type on front of the line a `#` e.g. `#en_US.UTF-8 UTF-8`
-* 7.4. To enable ones, make the opposite of above line = delete the `#` on front of the locale you want.
-* 7.5. You can also append an additional local at the end of the file e.g. `de_DE.UTF-8 UTF-8` but I don't recommend this if you made a classic Arch-Linux installation.
+* 8.1. Read all present installed Locales you can choose `locale -a` or...
+* 8.2. Edit `/etc/locale.gen` as 'ROOT' e.g. `sudo nano /etc/locale.gen` to see and/or enable other Locales.
+* 8.3. To disable a Locale-Set set/type on front of the line a `#` e.g. `#en_US.UTF-8 UTF-8`
+* 8.4. To enable ones, make the opposite of above line = delete the `#` on front of the locale you want.
+* 8.5. You can also append an additional local at the end of the file e.g. `de_DE.UTF-8 UTF-8` but I don't recommend this if you made a classic Arch-Linux installation.
 **Note:** this last step is not recommended and normally done by "Calamres" with very special settings.
-* 7.6. Generate the new Locales as 'ROOT' with `locale-gen`.
+* 8.6. Generate the new Locales as 'ROOT' with `locale-gen`.
 
 If you need/want the special settings or want to make some changes to standard new create locales, please use/reuse **§ 4** and **§ 5** for this scope.
 
