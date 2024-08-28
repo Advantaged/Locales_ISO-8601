@@ -133,7 +133,7 @@ LC_COLLATE=
 
 ```
 
-* 4.1.4. Following Line, with my changes, let show the time in 24 hours & the date in `ISO-8601` = `Y/m/d` , use `en_ZA.UTF-8` for displaying date with 'slash' 🟰 use `en_SE.UTF-8` or `ken_CM.UTF-8` for displaying date with 'dash' `2023/12/25`.
+* 4.1.4. Following Line, with my changes, let show the time in 24 hours & the date in `ISO-8601` = `Y/m/d` , use `en_ZA.UTF-8` for displaying date with 'slash' `2023/12/25` or use `en_SE.UTF-8` or `ken_CM.UTF-8` for displaying date with 'dash' `2023-12-25`.
 
 ```
 LC_TIME=
