@@ -103,15 +103,17 @@ LC_ALL=
 LC_ALL=C
 ```
 
-- 4.1.1. The Following Lines have to remain like your selected language during the installation or change all at the same value, e.g. `de_DE.UTF-8`:
+- 4.1.1. The Following Lines have to remain like your selected language during the installation e.g. `en_US.UTF8` or change all at the same value, e.g. `de_DE.UTF-8`:
 
 ```
 LANG=
+LC_COLLATE=
 LC_CTYPE=
 LC_IDENTIFICATION=
 LC_MESSAGES=
 
 ```
+* **Note:** The `LC_COLLATE=C` is better for machine-reading & list the "characters/letters" following the ASCII-Table, this is used for programing & is called `POSIX`, all other `LC_COLLATE=` are better for human-reading.
 
 - 4.1.2. Following Lines, e.g. if you are not in the USA, can you change according to the country you are:
 
@@ -126,20 +128,13 @@ LC_TELEPHONE=
 
 ```
 
-* 4.1.3. Following Line is recommended to be set to **C** = professional collating, normally don't need specialsettings.
-
-```
-LC_COLLATE=
-
-```
-
-* 4.1.4. Following Line, with my changes, let show the time in 24 hours & the date in `ISO-8601` = `Y/m/d` , use `en_ZA.UTF-8` for displaying date with 'slash' `2023/12/25` or use `en_SE.UTF-8` or `ken_CM.UTF-8` for displaying date with 'dash' `2023-12-25`.
+* 4.1.3. Following Line, with my changes, let show the time in 24 hours & the date in `ISO-8601` = `Y/m/d` , use `en_ZA.UTF-8` for displaying date with 'slash' `2023/12/25` or use `en_SE.UTF-8` or `ken_CM.UTF-8` for displaying date with 'dash' `2023-12-25`.
 
 ```
 LC_TIME=
 ```
 
-* 4.1.5. In this line you can set your primary language e.g. `en_US`, add a language variation e.g. `:en_GB` and/or add all languages you want to be installed/detected on the system e.g. `:de:es:fr:ia:it:jp:pt:ru:zh`. Please note the syntax = `:`+ "additional language" e.g. `:de:fr` etc..
+* 4.1.4. In this line you can set your primary language e.g. `en_US`, add a language variation e.g. `:en_GB` and/or add all languages you want to be installed/detected on the system e.g. `:de:es:fr:ia:it:jp:pt:ru:zh`. Please note the syntax = `:`+ "additional language" e.g. `:de:fr` etc., i discourage setting many language here.
 
 ```
 LANGUAGE=
